@@ -1,8 +1,20 @@
 # Chapter 2: Programming Paradigms
+\\Can you confirm whether the following topics from the outline have been covered in this chapter?
+\\SKILL 1: Learn how to recognize and differentiate between various data-first programming strategies.
+\\SKILL 2: Understand when a data-centric approach is more suitable than OOP.
+\\SKILL 3: Master the use of data-oriented programming techniques in C++.
 
-## Introduction
+This chapter begins our descent into the world of Data-Oriented programming.
+\\Can we add a few more lines to this paragraph about what this chapter will cover? We can also add some interoduction about data oriented programming. Otherwise, this introduciton appears to be too little and dry for the readers.
 
-Chapter Two begins our descent into the world of Data-Oriented programming.
+In this chapter, we'll cover the following topics:
+* The diciplines
+* The industry
+* Imperative Programming
+* Declarative programming
+* Functional programming
+* Object oriented programming
+* Data oriented programming
 
 By the end of the chapter you will:
 
@@ -11,10 +23,9 @@ By the end of the chapter you will:
 * Know -- and, hopefully, appreciate! -- the duality of the term Object-Oriented Programming.
 * Embrace that a couple other other programming paradigms are alive and well, and come in handy at times.
 * Become familiar with C++ constructs that make the code Data-Oriented, and understand why these C++-specific constructs are useful.
-
-## The Disciplines
-
 In the next chapter we dive deep into the history of programming itself. But let's do a high-level overview first.
+## The Disciplines
+\\ The above heading is a bit unclear - the disciplines of what? Let's clarify this so that readers don't get confused.
 
 For many people programming has started, and remains, most of all, a marvelous discipline of pragmatic science that is well worth exploring. Personally, as a kid I found myself fascinated by the idea that a piece of hardware is capable of solving, in seconds, most problems that humanity has ever faced in our entire history. All it takes is to formulate the problem in an unambiguous language, the language that the machine understands: the Programming Language.
 
@@ -25,6 +36,7 @@ Software Engineering has existed as an industry for over fifty years. Around fif
 To be frank, C++ as the language is fundamental and low-level enough, so that a pure Data Engineering book about C++ would be quite hollow. Whether we want it or not, a C++ book has to focus on C++, and mastering C++ as the language is solidly within the domain of Software Engineering. At the same time, Data Engineering these days includes building highly-performing low-latency systems about as much as it includes modeling, statistics, and machine learning algorithms. In other words, C++ does enable many of the use cases that Data Engineering experts who are only familiar with higher-level language struggle with.
 
 We should also mention it here, if only in passing, that as of 2024 a novel industry of what we can loosely call AI-Assisted Programming is emerging. This new industry is now in its infancy, although it is advancing rapidly. It is still safe to say that to be an effective AI-Assisted Programmer one has to understand the fundamentals of the approaches used in Software and Data Engineering. Time will tell if this knowledge becomes redundant for the generations of developers that come after us. For now we will assume you are interested in how programming is done in the industry today -- for you would likely not be reading this book if you are not.
+\\Let's add a signpost/tranisiton statement for the next section. We need to add a signpost so that the readers can follow your (the author's) thoughts. We can add why readers need to read the following section.
 
 ## The Industry
 
@@ -44,6 +56,7 @@ To set the elephant in the room free early on: it is well understood in the indu
 All of us have anecdotal stories when a company took a month or two to complete a task that virtually every savvy hacker in their late teens would be able to get done in just a few hours. Growing in seniority in the industry implies, among other things, accepting this not as a bug or as an unfortunate state of the art, but as a feature and as a necessary state of evolution of the phenomena of developing software at scale.
 
 This introduction was necessary to set our journey into various programming paradigms for success. A lone hacker who is enjoying themselves and their craft will hardly operate purely within one paradigm. It is more fun, more effective, and better for one's learning curve to keep inventing creative ways to combine existing paradigms, and even to create new ones as they fit. Nonetheless, various distinct programming paradigms exist today, and it is important to understand them.
+\\Can we list all the types of programming that we'll be covering in the upcoming sections? This will help the readers undersrtand things better.
 
 ## Imperative Programming
 
@@ -51,7 +64,10 @@ While it may not be true these days, for those who learned programming decades a
 
 **Imperative programming is about telling the machine what to do, step by step.** In the early days of developing software, the ability to tell the machine used to imply intimate low-level understanding of how the machine operates under the hood. Before higher-level languages comes the assembly language, and before the assembly language there are machine instruction opcodes.
 
-The C Programming Language is universally understood as the highest-level language of all low-level programming languages, as well as the lowest-level language of all the high-level programming languages. Most people who speak C++ understand quite some C, and whether we like it or not, using C++ effectively implies a certain degree of C-level reasoning and implementation techniques.
+The C Programming Language is universally understood as the highest-level language of all low-level programming languages, as well as the lowest-level language of all the high-level programming languages.
+\\The previous sentence is a bit confusing with all the high-level and low-level talk. Can we rewrite it for better understanding?
+
+ Most people who speak C++ understand quite some C, and whether we like it or not, using C++ effectively implies a certain degree of C-level reasoning and implementation techniques.
 
 It is worth noting that Bjarne Stroustrup famously said that there exists no such language as C/C++. This may not have been the case circa 2003, but it most definitely is the case in 2024. Anecdotally, this means that if your resume cites C/C++, you may want to write them as two separate languages. On a deeper level though, while we will focus exclusively on C++ in this book, your journey will have a few twists of C.
 
@@ -71,7 +87,8 @@ A declarative programming language you are already familiar with is the language
 
 Such an approach immediately enables powerful features such as, in the case of `make`, parallelism.
 
-Another declarative language that most programmers have had at least some exposure to is the language of Perl-Compatible Regular Expressions (PCREs). Don't worry if this does not read naturally to you, but many developers will instantly recognize what `/[_a-zA-Z][_a-zA-Z0-9]*/` stands for. It's a C-style identifier:
+Another declarative language that most programmers have had at least some exposure to is the language of **Perl-Compatible Regular Expressions** (**PCREs**). Don't worry if this does not read naturally to you, but many developers will instantly recognize what `/[_a-zA-Z][_a-zA-Z0-9]*/` stands for. It's a C-style identifier:
+\\We should use numbered bullets for the following list to indicate sequence.
 
 * Begin with one of (a union, `[]`):
 * * An underscore `_`,
@@ -88,18 +105,20 @@ When the programmer requests to check whether a provided string does or does not
 Looking back from 2024, regular expressions are a special breed of "write-only" languages, the use of which is often discouraged. A "write-only" language is the one whether producing the correct (or seemingly-correct) piece of code is generally not difficult, while reviewing, extending, and debugging it quickly becomes pure hell. In the industry, we like to err on the other side: it is acceptable for the code to take longer to write as long as it is easy to review, maintain, and extend further.
 
 Nonetheless, in addition to the `Makefile`-s, the language or Regular Expressions is a great example of a declarative programming language that is used widely today.
+\\I've noticed that we use hyphens as a suffix most of the times. I don't recommend this method of writing. 
 
-Without going too much into details, SQL, the Structured Query Language, is also closer to a declarative language than to an imperative one. Most definitely, both the SQL language specification and its various vendor-specific dialects offer plenty of room for imperative code. But, on the fundamental level, when `SELECT`-ing data from different tables that need to be `JOIN`-ed, the developer does not imperatively instruct the database which `for`-loops to run, and in which order. Instead, the "program" written in SQL is descriptive in nature. Unless we go down to the level of DBAs working on optimizing database indexes, the developer would much prefer to not know what exactly is happening behind the scenes. The developer "just" wants to get the result from the database, and the SQL programming language is so popular exactly for this reason: it serves as a great demarcation line between the side that queries the data and the side that is responsible for storing it efficiently.
+Without going too much into details, **SQL**, short for **Structured Query Language**, is also closer to a declarative language than to an imperative one. Most definitely, both the SQL language specification and its various vendor-specific dialects offer plenty of room for imperative code. But, on the fundamental level, when `SELECT`-ing data from different tables that need to be `JOIN`-ed, the developer does not imperatively instruct the database which `for`-loops to run, and in which order. Instead, the "program" written in SQL is descriptive in nature. Unless we go down to the level of DBAs working on optimizing database indexes, the developer would much prefer to not know what exactly is happening behind the scenes. The developer "just" wants to get the result from the database, and the SQL programming language is so popular exactly for this reason: it serves as a great demarcation line between the side that queries the data and the side that is responsible for storing it efficiently.
 
-On a closing note of this section, there is a lot of talk on the Internet these days on whether HTML is a declarative programming language; or whether HTML is a programming language at all. We would encourage savvy readers to stay away from those arguments, since HTML is first and foremost a markup language, not a programming language; it is closer to YAML than to any true programming. Web 2.0 indeed involved a lot of in-browser programming, but it's JavaScript, not HTML, that is the language where programming happens. However, to be pedantic, CSS, the Cascading Style Sheets markup definition language, fits the definition of the declarative language extremely well, and can safely be considered as such.
+On a closing note of this section, there is a lot of talk on the Internet these days on whether HTML is a declarative programming language; or whether HTML is a programming language at all. We would encourage savvy readers to stay away from those arguments, since HTML is first and foremost a markup language, not a programming language; it is closer to YAML than to any true programming. Web 2.0 indeed involved a lot of in-browser programming, but it's JavaScript, not HTML, that is the language where programming happens. However, to be pedantic, **CSS**, the **Cascading Style Sheets** markup definition language, fits the definition of the declarative language extremely well, and can safely be considered as such.
 
 ## Functional Programming
 
 Many books can be, were, and will be written on Functional Programming. 
 
 Functional Programming can be defined very narrowly, as the ability to "return" a function, or very broadly, from the Category Theory principles, outlining why "a monad is just a monoid in the category of endofunctors" on several hundred pages first.
+\\Will readers be able to comprehend the meaning of "a monad is just a monoid in the category of endofunctors"?
 
-We need a short intro though, to get to Data-Oriented Programming. Pragmatically speaking, Functional Programming has several characteristical properties.
+We need a short intro though, to get to Data-Oriented Programming. Pragmatically speaking, Functional Programming has several characteristical properties.\\Let's list out these properties first here for clarity.
 
 ### Purity
 
@@ -145,12 +164,12 @@ In programming languages that are functional in nature, there is no shortage of 
 
 But this is the price to pay. If a piece of functional programming code needs to interface with something external, such as the terminal, or a context of the network call, then this external piece would no longer be "the same" after the interaction, thus breaking the purity requirement. Therefore, some codified version of this externality, such as interfacing with the terminal, or any I/O input, would have to be part of the input for this code, and the now-altered state of this externality will have to be part of the output. In Haskell this mechanism is even called the `IO` monad, look online or ask your favorite AI agent for illustrative examples.
 
-### Summary
 
+\\I've deleted "Summary" section header from here as it might confuse the readers. 
 However academic this may sound, it is important these days to understand functional programming, if only as the paradigm. Each of the three concepts captured above -- purity, immutability, laziness -- is often useful, if only as the inspiration for how a certain piece of code can be designed better.
 
-The more senior you will grow, the more likely it is that it will be you who is designing libraries, and then even domain-specific languages (DSLs), for the broader team. People before you have tried this in most shapes and forms imaginable. Knowing what the distilled wisdom of functional programming is will allow you to stand on the shoulders of giants while making your dent in the field.
-
+The more senior you will grow, the more likely it is that it will be you who is designing libraries, and then even **domain-specific languages** (**DSLs**), for the broader team. People before you have tried this in most shapes and forms imaginable. Knowing what the distilled wisdom of functional programming is will allow you to stand on the shoulders of giants while making your dent in the field.
+\\We need to add a signpost for the following section in a few lines.
 ## Object-Oriented Programming
 
 The Object-Oriented Programming (OOP) paradigm may well be the most misunderstood one of all.
@@ -166,7 +185,7 @@ The original OOP literally boils down to a few very simple ideas:
 
 Let's unpack this.
 
-There exist *objects*. One could say they are instances of some classes, but that would undermine the concept. For instance, a _singleton object_ may well outlive the binary, and well-designed Object-Relational Mappings (ORMs) may well make this extended lifetime of an object transparent to the engineer writing the code. An object exists not in the realm of a particular piece of code, interface, factory, code-level singleton, or even a running binary. An object exists in the space of the business logic of the application. When and how this object is persisted, restored, replicated, etc. should not be the concern of the developer in a true Object-Oriented world. Instead, developers should focus exclusively on correctly implementing the business logic of how objects change their state over time, in response to external events, be they user actions, scheduled tasks, or other triggers.
+There exist *objects*. One could say they are instances of some classes, but that would undermine the concept. For instance, a _singleton object_ may well outlive the binary, and well-designed **Object-Relational Mappings** (**ORMs**) may well make this extended lifetime of an object transparent to the engineer writing the code. An object exists not in the realm of a particular piece of code, interface, factory, code-level singleton, or even a running binary. An object exists in the space of the business logic of the application. When and how this object is persisted, restored, replicated, etc. should not be the concern of the developer in a true Object-Oriented world. Instead, developers should focus exclusively on correctly implementing the business logic of how objects change their state over time, in response to external events, be they user actions, scheduled tasks, or other triggers.
 
 Objects communicate with each other via **messages**. This means far more than just "objects have private members that only the methods of this object can access". This means that the object is inherently a black box as seen by all other objects. This means that the only way to communicate with this object, if only to get its current state, is to send it a message and then, *asynchronously*, expect a response.
 
@@ -201,3 +220,4 @@ With the obligatory disclaimer that Data-Oriented Programming is a novel term th
 Another way to look at it is that Data-Oriented Programming, when applied to C++, is very much a clever way to bring the best parts of the philosophy of C straight into C++. In other words, coding in a data-oriented paradigm in C++ is the way to have the cake and eat it at the same time. In the chapters to come we will explore how exactly this cake is not a lie, for example.
 
 Also, never forget that programming languages and paradigms exist, first and foremost, to foster long-term collaboration of multiple people of diverse skill levels and backgrounds. Don't be a skeptic right away if you think you know a better way forward. You may well indeed, and it's not about you -- it's about the broader team that will be debugging and extending and refactoring your code later on. The market of helping individual developers have fun while hacking is just too narrow -- hence most books you'd encounter would instead focus on how to be productive and effective as part of the broader team. This book is no exception, although you having fun is indeed one of our goals while writing it!
+\\We need to add a few lines about what the next chapter will cover. This helps the readers understand about the next chapter before actually reading it.
