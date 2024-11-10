@@ -1,20 +1,6 @@
 # Chapter 2: Programming Paradigms
-\\Can you confirm whether the following topics from the outline have been covered in this chapter?
-\\SKILL 1: Learn how to recognize and differentiate between various data-first programming strategies.
-\\SKILL 2: Understand when a data-centric approach is more suitable than OOP.
-\\SKILL 3: Master the use of data-oriented programming techniques in C++.
 
-This chapter begins our descent into the world of Data-Oriented programming.
-\\Can we add a few more lines to this paragraph about what this chapter will cover? We can also add some interoduction about data oriented programming. Otherwise, this introduciton appears to be too little and dry for the readers.
-
-In this chapter, we'll cover the following topics:
-* The diciplines
-* The industry
-* Imperative Programming
-* Declarative programming
-* Functional programming
-* Object oriented programming
-* Data oriented programming
+This chapter begins our descent into the world of Data-Oriented programming. We start from outlining what programming disciplines we have, academically and in the industry. We then go into the details of most common programming paradigms today: imperative, declarative, and functional. We also present the case for low- and high-level programming languages, arguing that C and C++ are very well positioned to let the developer stay close to the hardware and yet code in broad strokes.
 
 By the end of the chapter you will:
 
@@ -22,12 +8,13 @@ By the end of the chapter you will:
 * Understand what we understand as Data-Oriented Programming for the purposes of this book.
 * Know -- and, hopefully, appreciate! -- the duality of the term Object-Oriented Programming.
 * Embrace that a couple other other programming paradigms are alive and well, and come in handy at times.
-* Become familiar with C++ constructs that make the code Data-Oriented, and understand why these C++-specific constructs are useful.
-In the next chapter we dive deep into the history of programming itself. But let's do a high-level overview first.
-## The Disciplines
-\\ The above heading is a bit unclear - the disciplines of what? Let's clarify this so that readers don't get confused.
+* And get a glimpse into what makes C++ so well suited to exercise data-oriented programming in.
 
-For many people programming has started, and remains, most of all, a marvelous discipline of pragmatic science that is well worth exploring. Personally, as a kid I found myself fascinated by the idea that a piece of hardware is capable of solving, in seconds, most problems that humanity has ever faced in our entire history. All it takes is to formulate the problem in an unambiguous language, the language that the machine understands: the Programming Language.
+In the next chapter we dive deep into the history of programming itself. But let's do a high-level overview first.
+
+## The Academic Approach
+
+For many people programming has started, and remains, most of all, a marvelous craft of pragmatic science that is well worth exploring. Personally, as a kid I found myself fascinated by the idea that a piece of hardware is capable of solving, in seconds, most problems that humanity has ever faced in our entire history. All it takes is to formulate the problem in an unambiguous language, the language that the machine understands: the Programming Language.
 
 Formulating problems in a well-formalized way is itself a great challenge, as intellectually rewarding for many early-days programmers as solving the most elegant puzzles. Furthermore, mastering this art and craft of communicating with the computer in a way it understands opened doors to a lucrative career in the field we all know today as Software Engineering.
 
@@ -36,7 +23,8 @@ Software Engineering has existed as an industry for over fifty years. Around fif
 To be frank, C++ as the language is fundamental and low-level enough, so that a pure Data Engineering book about C++ would be quite hollow. Whether we want it or not, a C++ book has to focus on C++, and mastering C++ as the language is solidly within the domain of Software Engineering. At the same time, Data Engineering these days includes building highly-performing low-latency systems about as much as it includes modeling, statistics, and machine learning algorithms. In other words, C++ does enable many of the use cases that Data Engineering experts who are only familiar with higher-level language struggle with.
 
 We should also mention it here, if only in passing, that as of 2024 a novel industry of what we can loosely call AI-Assisted Programming is emerging. This new industry is now in its infancy, although it is advancing rapidly. It is still safe to say that to be an effective AI-Assisted Programmer one has to understand the fundamentals of the approaches used in Software and Data Engineering. Time will tell if this knowledge becomes redundant for the generations of developers that come after us. For now we will assume you are interested in how programming is done in the industry today -- for you would likely not be reading this book if you are not.
-\\Let's add a signpost/tranisiton statement for the next section. We need to add a signpost so that the readers can follow your (the author's) thoughts. We can add why readers need to read the following section.
+
+After this acedemically laid out landscape of the field, let's dive into the weeds of how the sausage of software is made.
 
 ## The Industry
 
@@ -56,7 +44,8 @@ To set the elephant in the room free early on: it is well understood in the indu
 All of us have anecdotal stories when a company took a month or two to complete a task that virtually every savvy hacker in their late teens would be able to get done in just a few hours. Growing in seniority in the industry implies, among other things, accepting this not as a bug or as an unfortunate state of the art, but as a feature and as a necessary state of evolution of the phenomena of developing software at scale.
 
 This introduction was necessary to set our journey into various programming paradigms for success. A lone hacker who is enjoying themselves and their craft will hardly operate purely within one paradigm. It is more fun, more effective, and better for one's learning curve to keep inventing creative ways to combine existing paradigms, and even to create new ones as they fit. Nonetheless, various distinct programming paradigms exist today, and it is important to understand them.
-\\Can we list all the types of programming that we'll be covering in the upcoming sections? This will help the readers undersrtand things better.
+
+In the next sections of this chapter we will cover the paradigms of Imperative, Declarative, and Functional programming, before setting the table for the ultimate quest for Data-Oriented programming.
 
 ## Imperative Programming
 
@@ -64,10 +53,14 @@ While it may not be true these days, for those who learned programming decades a
 
 **Imperative programming is about telling the machine what to do, step by step.** In the early days of developing software, the ability to tell the machine used to imply intimate low-level understanding of how the machine operates under the hood. Before higher-level languages comes the assembly language, and before the assembly language there are machine instruction opcodes.
 
-The C Programming Language is universally understood as the highest-level language of all low-level programming languages, as well as the lowest-level language of all the high-level programming languages.
-\\The previous sentence is a bit confusing with all the high-level and low-level talk. Can we rewrite it for better understanding?
+The C Programming Language is infamous in a unique way. It is commonly described as both:
 
- Most people who speak C++ understand quite some C, and whether we like it or not, using C++ effectively implies a certain degree of C-level reasoning and implementation techniques.
+* As the highest-level language of all low-level programming languages, and at the same time
+* As the lowest-level language of all the high-level programming languages.
+
+For the purposes of this book, it would do the justice to mention that C can definitely be understood as a low-level systems programming language. It would be correct to say that C is only a few steps above the Assembly language, in which CPU instructions are described one after another. On the other hand, even though modern-day high-level programming languages have raised the bar significantly, we can also argue that C does qualify for a high-level language. And, of course, C++ ia substantially more high-level than C; oftentimes to the dislike of the folks who prefer their C raw.
+
+Nonetheless, most people who speak C++ understand C quite well, and, whether we like it or not, using C++ effectively implies a certain degree of C-level reasoning and mastery.
 
 It is worth noting that Bjarne Stroustrup famously said that there exists no such language as C/C++. This may not have been the case circa 2003, but it most definitely is the case in 2024. Anecdotally, this means that if your resume cites C/C++, you may want to write them as two separate languages. On a deeper level though, while we will focus exclusively on C++ in this book, your journey will have a few twists of C.
 
@@ -88,17 +81,16 @@ A declarative programming language you are already familiar with is the language
 Such an approach immediately enables powerful features such as, in the case of `make`, parallelism.
 
 Another declarative language that most programmers have had at least some exposure to is the language of **Perl-Compatible Regular Expressions** (**PCREs**). Don't worry if this does not read naturally to you, but many developers will instantly recognize what `/[_a-zA-Z][_a-zA-Z0-9]*/` stands for. It's a C-style identifier:
-\\We should use numbered bullets for the following list to indicate sequence.
 
-* Begin with one of (a union, `[]`):
-* * An underscore `_`,
-* * A lowercase latin character `a-z`,
-* * Or an uppercase latin character: `A-Z`,
-* Followed by zero, one, or more (the `*` at the end of the second set of `[]`):
-* * An underscore `_`,
-* * A lowercase latin character `a-z`,
-* * An uppercase latin character: `A-Z`,
-* * Or a digit `0-9`.
+1. Begin with one of (a union, `[]`):
+  * An underscore `_`,
+  * A lowercase latin character `a-z`,
+  * Or an uppercase latin character: `A-Z`,
+2. Followed by zero, one, or more (the `*` at the end of the second set of `[]`):
+  * An underscore `_`,
+  * A lowercase latin character `a-z`,
+  * An uppercase latin character: `A-Z`,
+  * Or a digit `0-9`.
 
 When the programmer requests to check whether a provided string does or does not **match** given a regular expression, this programmer outsources the particular implementation of the matching algorithm to the underlying framework. Most of the frameworks will build a state machine ("compile a regular expression"), so that this state machine can then be fed the characters of the input string, one by one, sequentially. It should be noted that a sufficiently sophisticated regular expression may take quite a while to be applied to a long string, and this was the source of many outages on the Internet before.
 
@@ -115,10 +107,16 @@ On a closing note of this section, there is a lot of talk on the Internet these 
 
 Many books can be, were, and will be written on Functional Programming. 
 
-Functional Programming can be defined very narrowly, as the ability to "return" a function, or very broadly, from the Category Theory principles, outlining why "a monad is just a monoid in the category of endofunctors" on several hundred pages first.
-\\Will readers be able to comprehend the meaning of "a monad is just a monoid in the category of endofunctors"?
+Functional Programming can be defined very narrowly, as the ability to "return" a function. Or it can be defined extremely broadly, from the Category Theory principles, outlining why "a monad is just a monoid in the category of endofunctors" on several hundred pages first. Since this book is about C++ and about writing Data-Oriented code, we will refrain from the Category Theory and use simple language.
 
-We need a short intro though, to get to Data-Oriented Programming. Pragmatically speaking, Functional Programming has several characteristical properties.\\Let's list out these properties first here for clarity.
+<details>
+  <summary>Just kidding.</summary>
+
+  The "monad is just a monoid in the category of endofunctors" statement, while accurate, is a common joke. It would rank high on the list of explanations that are factually correct but provide literally zero explanatory value. Sorry, we just could not resist inserting this pun into the chapter.
+
+</details>
+
+We need a short intro though, to get to Data-Oriented Programming. Pragmatically speaking, Functional Programming has several characteristic properties. The ones we dive into in the following sub-chapters are purity, immutability, laziness, and, well, monads.
 
 ### Purity
 
@@ -146,7 +144,7 @@ Upon request, if `the_answer` was already evaluated before, the result of that e
 
 Here's a famous joke. A professor is about to start the first language on functional programming. The opening statement is: "Do you have any questions?"
 
-Laziness is the concept that nothing is evaluated until it truly is needed. So, without a clear request, no work will even start. This is why Haskell programmers can comfortably reason in infinite lists: the never-ending part of the list does not ever materialize in the first place.
+Laziness, or, more formally, lazy evaluation, is the concept that no work is performed until the result of this work is required to materialize. In other words, without a clear request, no work will even begin. This is why Haskell programmers can comfortably reason in infinite lists: the never-ending part of the list does not "exist" in the first place, since knowing how to traverse it is sufficient.
 
 The concept of laziness naturally imposes an entirely different way of thinking of time. For an imperative program, especially when executing on a single CPU core, it is clear to the developer what operation happens before what others. For instance, a trivial program that first asks for the user's name and then prints "Hello, John!", would, naturally, _first_ ask for the user's name, and _then_ print the greeting.
 
@@ -164,15 +162,15 @@ In programming languages that are functional in nature, there is no shortage of 
 
 But this is the price to pay. If a piece of functional programming code needs to interface with something external, such as the terminal, or a context of the network call, then this external piece would no longer be "the same" after the interaction, thus breaking the purity requirement. Therefore, some codified version of this externality, such as interfacing with the terminal, or any I/O input, would have to be part of the input for this code, and the now-altered state of this externality will have to be part of the output. In Haskell this mechanism is even called the `IO` monad, look online or ask your favorite AI agent for illustrative examples.
 
-
-\\I've deleted "Summary" section header from here as it might confuse the readers. 
 However academic this may sound, it is important these days to understand functional programming, if only as the paradigm. Each of the three concepts captured above -- purity, immutability, laziness -- is often useful, if only as the inspiration for how a certain piece of code can be designed better.
 
-The more senior you will grow, the more likely it is that it will be you who is designing libraries, and then even **domain-specific languages** (**DSLs**), for the broader team. People before you have tried this in most shapes and forms imaginable. Knowing what the distilled wisdom of functional programming is will allow you to stand on the shoulders of giants while making your dent in the field.
-\\We need to add a signpost for the following section in a few lines.
+The more senior you will grow, the more likely it is that it will be you who is designing libraries, and then even **domain-specific languages** (**DSLs**) for the broader team. People before you have tried this in most shapes and forms imaginable. Knowing what the distilled wisdom of functional programming is will allow you to stand on the shoulders of giants while making your dent in the field.
+
+Armed with this knowledge on functional programming, we can now go on to Object-Oriented Programming.
+
 ## Object-Oriented Programming
 
-The Object-Oriented Programming (OOP) paradigm may well be the most misunderstood one of all.
+The Object-Oriented Programming paradigm, often shortened to OOP, may well be the most misunderstood one of all.
 
 Most programmers today, if asked gently what the OOP is about, would answer along the lines of the "encapsulation, polymorphism, inheritance" concepts, and the `public` / `protected` / `private` access modifiers. If we look at OOP from its early days, nothing could be further from the truth.
 
@@ -213,11 +211,12 @@ In other words, data, both in its high-level model and in its low-level represen
 
 ## Recap
 
-Programming paradigms have existed for as long as Software Engineering, and now Data Engineering, exist as disciplines.
+Programming paradigms have existed for as long as Software Engineering, and now Data Engineering, exist as well-versed scientific and applied disciplines.
 
 With the obligatory disclaimer that Data-Oriented Programming is a novel term the meaning of which will be evolving over time, it is a major step in a fascinating direction. In many ways, Data-Oriented Programming and C++ have been created for one another. It's a match made in heaven, and, no matter what the future brings, understanding how to leverage machine-orientedness while remaining in the realm of high-level C++ will likely remain a superpower for years to come. Not to mention it's fun to work with too.
 
 Another way to look at it is that Data-Oriented Programming, when applied to C++, is very much a clever way to bring the best parts of the philosophy of C straight into C++. In other words, coding in a data-oriented paradigm in C++ is the way to have the cake and eat it at the same time. In the chapters to come we will explore how exactly this cake is not a lie, for example.
 
 Also, never forget that programming languages and paradigms exist, first and foremost, to foster long-term collaboration of multiple people of diverse skill levels and backgrounds. Don't be a skeptic right away if you think you know a better way forward. You may well indeed, and it's not about you -- it's about the broader team that will be debugging and extending and refactoring your code later on. The market of helping individual developers have fun while hacking is just too narrow -- hence most books you'd encounter would instead focus on how to be productive and effective as part of the broader team. This book is no exception, although you having fun is indeed one of our goals while writing it!
-\\We need to add a few lines about what the next chapter will cover. This helps the readers understand about the next chapter before actually reading it.
+
+Now we are ready for the next chapter, in which we truly begin going deep that Data-Orientedness stands for. And this begins with understanding how memory works.
