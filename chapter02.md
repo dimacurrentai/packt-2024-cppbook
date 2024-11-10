@@ -24,7 +24,7 @@ To be frank, C++ as the language is fundamental and low-level enough, so that a 
 
 We should also mention it here, if only in passing, that as of 2024 a novel industry of what we can loosely call AI-Assisted Programming is emerging. This new industry is now in its infancy, although it is advancing rapidly. It is still safe to say that to be an effective AI-Assisted Programmer one has to understand the fundamentals of the approaches used in Software and Data Engineering. Time will tell if this knowledge becomes redundant for the generations of developers that come after us. For now we will assume you are interested in how programming is done in the industry today -- for you would likely not be reading this book if you are not.
 
-After this acedemically laid out landscape of the field, let's dive into the weeds of how the sausage of software is made.
+After this academically laid out landscape of the field, let's dive into the weeds of how the sausage of software is made.
 
 ## The Industry
 
@@ -55,8 +55,8 @@ While it may not be true these days, for those who learned programming decades a
 
 The C Programming Language is infamous in a unique way. It is commonly described as both:
 
-* As the highest-level language of all low-level programming languages, and at the same time
-* As the lowest-level language of all the high-level programming languages.
+* The highest-level language of all low-level programming languages, and at the same time
+* The lowest-level language of all the high-level programming languages.
 
 For the purposes of this book, it would do the justice to mention that C can definitely be understood as a low-level systems programming language. It would be correct to say that C is only a few steps above the Assembly language, in which CPU instructions are described one after another. On the other hand, even though modern-day high-level programming languages have raised the bar significantly, we can also argue that C does qualify for a high-level language. And, of course, C++ ia substantially more high-level than C; oftentimes to the dislike of the folks who prefer their C raw.
 
